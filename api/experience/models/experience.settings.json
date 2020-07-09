@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "experiences",
+  "info": {
+    "name": "experience"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "companyName": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "role": {
+      "type": "string"
+    },
+    "isCurrent": {
+      "type": "boolean"
+    },
+    "initialDate": {
+      "type": "date"
+    },
+    "finalDate": {
+      "type": "date"
+    },
+    "companyLogo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "companySite": {
+      "type": "string"
+    }
+  }
+}
